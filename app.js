@@ -75,3 +75,17 @@ keys.forEach(key => {
     buttonElement.addEventListener('click', () => handleClick(key))
     keyboard.append(buttonElement)
 })
+
+const handleClick = (letter) => {
+    if (!isGameOver) {
+        if (letter === '«') {
+            deleteLetter()
+            return
+        }
+        if (letter === 'ENTER') {
+            checkRow()
+            return
+        }
+        addLetter(letter)
+    }
+}
