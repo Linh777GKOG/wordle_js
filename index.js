@@ -50,3 +50,5 @@ app.get('/check', (req, res) => {
       console.error(error);
     });
 });
+
+app.listen(PORT, () => console.log('Server running on port ' + PORT));
