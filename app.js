@@ -151,3 +151,20 @@ const addColorToKey = (keyLetter, color) => {
     const key = document.getElementById(keyLetter)
     key.classList.add(color)
 }
+const flipTile = () => {
+    const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes
+    let checkWordle = wordle
+    const guess = []
+
+    rowTiles.forEach(tile => {
+        guess.push({letter: tile.getAttribute('data'), color: 'grey-overlay'})
+    })
+
+    guess.forEach((guess, index) => {
+        if (guess.letter == wordle[index]) {
+            guess.color = 'green-overlay'
+            checkWordle = checkWordle.replace(guess.letter, '')
+        }
+    })
+
+    
