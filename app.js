@@ -67,3 +67,11 @@ guessRows.forEach((guessRow, guessRowIndex) => {
     })
     tileDisplay.append(rowElement)
 })
+
+keys.forEach(key => {
+    const buttonElement = document.createElement('button')
+    buttonElement.textContent = key
+    buttonElement.setAttribute('id', key)
+    buttonElement.addEventListener('click', () => handleClick(key))
+    keyboard.append(buttonElement)
+})
