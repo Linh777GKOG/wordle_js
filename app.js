@@ -44,3 +44,14 @@ const keys = [
     'M',
     '«',
 ]
+const guessRows = [
+    ['', '', '', '', ''],
+    ['', '', '', '', ''],
+    ['', '', '', '', ''],
+    ['', '', '', '', ''],
+    ['', '', '', '', ''],
+    ['', '', '', '', '']
+]
+let currentRow = 0
+let currentTile = 0
+let isGameOver = false
